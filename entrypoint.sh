@@ -1,4 +1,7 @@
 #!/bin/sh
+# Disable core dumps to prevent large files
+ulimit -c 0
+
 # Start Xvfb in background if headful mode might be used
 if [ "${CHROME_HEADFUL}" = "true" ] || [ "${ENABLE_XVFB}" = "true" ]; then
     echo "Starting Xvfb on display :99"

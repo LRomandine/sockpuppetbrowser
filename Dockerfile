@@ -15,6 +15,8 @@ RUN pip3 install --no-cache --upgrade pip setuptools virtualenv
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
+# Core dump limits will be set in entrypoint.sh
+
 USER chrome
 
 #@todo Add some random collection of fonts and other stuff to blur the fingerprint a bit
